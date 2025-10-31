@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Resume | Your Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo">Your Name</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <button id="dark-mode-toggle">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>My Resume</h2>
+    <iframe src="Resume.pdf" width="100%" height="800px" frameborder="0"></iframe>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById("dark-mode-toggle");
+
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("light-theme");
+      if (document.body.classList.contains("light-theme")) {
+        toggleBtn.textContent = "☀️";
+      } else {
+        toggleBtn.textContent = "🌙";
+      }
+    });
+  </script>
+</body>
+</html>
